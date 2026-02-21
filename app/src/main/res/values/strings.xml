@@ -1,5 +1,13 @@
 <resources>
-    <string name="app_name">Virtual App Isolator</string>
-    <string name="isolate_app">عزل التطبيق</string>
-    <string name="launch_app">تشغيل في البيئة المعزولة</string>
+    <string name="app_name">Virtual Isoler</string>
+    <string name="installed_apps">التطبيقات المثبتة</string>
+    <string name="virtual_apps">التطبيقات المعزولة</string>
+    <string name="modules">الوحدات</string>
+    <string name="search_hint">ابحث عن تطبيق...</string>
+    <string name="add_to_virtual">إضافة للعزل</string>
+    <string name="open">فتح</string>
+    <string name="remove">إزالة</string>
+    <string name="settings">الإعدادات</string>
+    <string name="about">حول</string>
+    <string name="no_apps_found">لا توجد تطبيقات</string>
 </resources>

@@ -1,23 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    android:padding="16dp">
+    android:background="@color/window_background">
 
-    <TextView
+    <!-- شريط الأدوات -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary"
+        app:title="Virtual Isoler"
+        app:titleTextColor="#FFFFFF"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <!-- علامات التبويب -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/card_background"
+        app:tabTextColor="@color/text_secondary"
+        app:tabSelectedTextColor="@color/primary"
+        app:tabIndicatorColor="@color/primary"
+        app:tabMode="fixed">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/installed_apps" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/virtual_apps" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/modules" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <!-- منطقة البحث -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="@color/card_background">
+
+        <EditText
+            android:id="@+id/searchBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/search_hint"
+            android:padding="12dp"
+            android:background="@drawable/search_bg"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/searchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="بحث"
+            android:backgroundTint="@color/primary" />
+
+    </LinearLayout>
+
+    <!-- قائمة التطبيقات -->
+    <ListView
+        android:id="@+id/appsList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:padding="8dp" />
+
+    <!-- زر الإضافة العائم -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addFab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Virtual App Isolator"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="32dp"/>
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_input_add"
+        android:backgroundTint="@color/primary" />
 
-    <Button
-        android:id="@+id/btn_test"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Test App"/>
-        
 </LinearLayout>

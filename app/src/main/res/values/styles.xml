@@ -1,4 +1,20 @@
 <resources>
-    <style name="AppTheme" parent="android:Theme.Light">
+    <!-- التصميم الأساسي -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#6200EE</item>
+        <item name="colorPrimaryDark">#3700B3</item>
+        <item name="colorAccent">#03DAC5</item>
+        <item name="android:windowBackground">@color/window_background</item>
+    </style>
+    
+    <!-- تصميم الشاشة الرئيسية -->
+    <style name="AppTheme.Main" parent="AppTheme">
+        <item name="android:statusBarColor">@color/primary_dark</item>
+    </style>
+    
+    <!-- تصميم عناصر القائمة -->
+    <style name="AppItemStyle">
+        <item name="android:padding">12dp</item>
+        <item name="android:background">@drawable/app_item_bg</item>
     </style>
 </resources>
