@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         
         Button btnIsolate = findViewById(R.id.btn_isolate);
         btnIsolate.setOnClickListener(v -> 
-            Toast.makeText(this, "بيئة العزل قيد التطوير", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Isolation feature coming soon!", Toast.LENGTH_SHORT).show()
         );
     }
 }
