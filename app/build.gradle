@@ -4,12 +4,12 @@ plugins {
 
 android {
     namespace 'com.example.virtualisoler'
-    compileSdk 34  # تغيير من 33 إلى 34
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.example.virtualisoler"
         minSdk 24
-        targetSdk 34  # تغيير من 33 إلى 34
+        targetSdk 34
         versionCode 1
         versionName "1.0"
     }
