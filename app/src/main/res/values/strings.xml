@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Virtual App Isolator</string>
+    <string name="isolate_app">عزل التطبيق</string>
+    <string name="launch_app">تشغيل في البيئة المعزولة</string>
+</resources>
