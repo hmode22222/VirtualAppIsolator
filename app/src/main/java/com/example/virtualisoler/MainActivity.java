@@ -59,8 +59,8 @@ public class MainActivity extends AppCompatActivity {
         // إعداد زر الإضافة
         setupAddButton(addFab);
         
-        // بدء الخدمة
-        startVirtualService();
+        // ❌ تم تعطيل الخدمة مؤقتاً لحل مشكلة الإغلاق
+        // startVirtualService();
     }
 
     private void setupSearch(Button searchBtn) {
@@ -149,14 +149,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openVirtualApp(AppInfo app) {
-        Intent serviceIntent = new Intent(this, VirtualService.class);
-        serviceIntent.setAction("START_VIRTUAL_APP");
-        serviceIntent.putExtra("package", app.getPackageName());
-        startService(serviceIntent);
-    }
-
-    private void startVirtualService() {
-        Intent serviceIntent = new Intent(this, VirtualService.class);
-        startService(serviceIntent);
+        // تشغيل التطبيق مباشرة بدون خدمة
+        try {
+            Intent launchIntent = getPackageManager().getLaunchIntentForPackage(app.getPackageName());
+            if (launchIntent != null) {
+                startActivity(launchIntent);
+            }
+        } catch (Exception e) {
+            Toast.makeText(this, "Cannot open app", Toast.LENGTH_SHORT).show();
+        }
     }
 }
